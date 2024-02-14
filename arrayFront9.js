@@ -1,15 +1,13 @@
 function arrayFront9(nums) {
+    let charLimit 
     if(nums.length>4){
-        for (let i = 0; i<4; i++) {
-            if (nums[i]==9) {
-                return true
-            }
-        }
+        charLimit = 4
     } else {
-        for (let i = 0; i<nums.length; i++) {
-            if (nums[i]==9) {
-                return true
-            }
+        charLimit = nums.length
+    }
+    for (let i = 0; i<charLimit; i++) {
+        if (nums[i]==9) {
+            return true
         }
     }
     return false
